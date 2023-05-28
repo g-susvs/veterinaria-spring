@@ -32,5 +32,5 @@ public class Veterinaria {
 
     private String imagen;
 
-    private int destacado;
+    private int destacado = 1;
 }

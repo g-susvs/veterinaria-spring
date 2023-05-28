@@ -26,6 +26,12 @@ public class HomeController {
         return "home";
     }
 
+    @GetMapping("/form")
+    public String form(Model model) {
+
+        return "form";
+    }
+
     // private List<Veterinaria> getAll() {
     // Veterinaria veterinaria1 = new Veterinaria();
     // veterinaria1.setId(1);
