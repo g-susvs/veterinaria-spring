@@ -30,7 +30,7 @@ public class Veterinaria {
     @Column(length = 255)
     private String direccion;
 
-    private String imagen;
+    private String imagen = "";
 
     private int destacado = 1;
 }

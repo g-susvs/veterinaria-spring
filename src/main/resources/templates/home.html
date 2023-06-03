@@ -32,7 +32,10 @@
         </tr>
         <tr th:each="Veterinaria : ${veterinarias}">
             <td>
-                <img th:src="@{/imgs/{img} (img=${Veterinaria.imagen})}" width="100" height="90" />
+                <img th:if="${Veterinaria.imagen != null and Veterinaria.imagen.contains('cloudinary')}"
+                    th:src="${Veterinaria.imagen}" width="100" height="90" />
+                <img th:unless="${Veterinaria.imagen != null and Veterinaria.imagen.contains('cloudinary')}"
+                    th:src="@{/imgs/{img} (img=${Veterinaria.imagen})}" width="100" height="90" />
             </td>
             <td th:text="${Veterinaria.id}"></td>
             <td th:text="${Veterinaria.nombre}"></td>
@@ -43,9 +46,12 @@
                 <span th:if="${Veterinaria.destacado == 1}" class="badge bg-success">ACTIVO</span>
                 <span th:unless="${Veterinaria.destacado == 1}" class="badge bg-danger">BLOQUEADO</span>
             </td>
-            <!--     <td th:text = "${(vacante.destacado == 1)? 'ACTIVO' : 'BLOQUEADO'}"></td> -->
         </tr>
     </table>
+    <div class="position-fixed bottom-0 end-0 p-3">
+        <a href="form" class="btn btn-primary">Formulario</a>
+    </div>
+
 </body>
 
 </html>
