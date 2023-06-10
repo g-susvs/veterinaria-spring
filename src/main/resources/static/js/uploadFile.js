@@ -41,6 +41,7 @@ const uploadFile = async (id, formData) => {
 
     const data = await resp.json();
     if (data.error) {
+      console.error(data);
       console.error("Fallo");
       Swal.fire({
         title: "Error!",

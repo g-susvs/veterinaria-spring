@@ -16,12 +16,13 @@
 
 <body class="container">
     <h1 class="text-primary">Subir Imagen</h1>
-    <h3 th:text="'Veterinaria: ' + ${veterinaria.getNombre}"></h3>
-    <h5 id="id_vet" th:text="${veterinaria.id}"></h5>
+    <h3>Veterinaria: <span class="text-secondary" th:text="${veterinaria.nombre}"></span></h3>
+    <h5>Correo: <span class="text-secondary" th:text="${veterinaria.correo}"></span></h5>
+    <h5>Id: <span class="text-secondary" id="id_vet" th:text="${veterinaria.id}"></span></h5>
     <br>
     <form>
         <input id="input-file" type="file" name="archivo" placeholder="Ingresa un archivo">
-        <button class="btn btn-primary">Enviar</button><br>
+        <button class="btn btn-primary" type="submit">Enviar</button><br>
         <img id="img-upload">
     </form>
 
