@@ -31,7 +31,7 @@ public class CloudController {
     }
 
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<Map> upload(@PathVariable("id") String id) throws IOException {
+    public ResponseEntity<Map> upload(@PathVariable String id) throws IOException {
         Map result = cloudinaryService.delete(id);
         return new ResponseEntity<>(result, HttpStatus.OK);
     }

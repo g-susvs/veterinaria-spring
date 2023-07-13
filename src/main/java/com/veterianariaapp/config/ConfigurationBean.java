@@ -5,7 +5,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import com.cloudinary.Cloudinary;
+import com.veterianariaapp.service.CitaServiceImpl;
+import com.veterianariaapp.service.UsuarioServiceImpl;
 import com.veterianariaapp.service.VeterinariaServiceImpl;
+import com.veterianariaapp.service.interfaces.CitaService;
+import com.veterianariaapp.service.interfaces.UsuarioService;
 import com.veterianariaapp.service.interfaces.VeterinariaService;
 
 @Configuration
@@ -31,6 +35,16 @@ public class ConfigurationBean {
     @Bean
     VeterinariaService veterinariaService() {
         return new VeterinariaServiceImpl();
+    }
+
+    @Bean
+    UsuarioService usuarioService() {
+        return new UsuarioServiceImpl();
+    }
+
+    @Bean
+    CitaService citaService() {
+        return new CitaServiceImpl();
     }
 
 }
