@@ -8,4 +8,6 @@ public interface UsuarioService {
     List<Usuario> getUsuarios();
 
     Usuario saveUsuario(Usuario usuario);
+
+    Usuario buscarPorUsername(String username);
 }
